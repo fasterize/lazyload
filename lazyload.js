@@ -32,7 +32,7 @@ if (!window['lzld']) {
       // Vertical offset in px. Used for preloading images while scrolling
       offset = 200,
       //where to get real src
-      lazyAttr = 'data-src',
+      lazyAttr = 'data-frz-src',
       // Window height
       winH = viewport(),
       // Self-populated page images array, we do not getElementsByTagName
