@@ -56,7 +56,7 @@ The only drawback is that you can have red crosses showing that original data ur
 
 You can have IE6/7 support without the hack, use the `b.gif` image instead of the data uri:s and remove `onerror`.
 
-## How does it works
+## How does it work
 
 We built our lazyloader with efficiency and speed in mind.
 
