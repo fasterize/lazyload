@@ -22,7 +22,7 @@ you do not have any other scripts in the `<head>`.
 
 ```html
   <img
-    data-src="real/image/src.jpg"
+    data-frz-src="real/image/src.jpg"
     src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
     onload=lzld(this) onerror=lzld(this) />
 ```
