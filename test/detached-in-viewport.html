@@ -12,7 +12,7 @@
       // polling for not-yet-loaded images
       // but that's expensive
       // if you resize and scroll down, it will be shown
-      var $img = $('<img data-src="imgs/2.jpg" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== onload=lzld(this) onerror=lzld(this) />');
+      var $img = $('<img data-frz-src="imgs/2.jpg" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== onload=lzld(this) onerror=lzld(this) />');
       $(window).load(function() {
         setTimeout(function(){
           $('#ajax').append($img);
