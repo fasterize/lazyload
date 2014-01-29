@@ -41,7 +41,7 @@ if (!window['lzld']) {
       unsubscribed = false,
 
       // throttled functions, so that we do not call them too much
-      saveViewportT = throttle(viewport, 20),
+      saveViewportT = throttle(saveViewport, 20),
       showImagesT = throttle(showImages, 20);
 
     // Override image element .getAttribute globally so that we give the real src
@@ -239,6 +239,7 @@ if (!window['lzld']) {
     function unsubscribe() {
       unsubscribed = true;
       removeEvent(window, 'resize', saveViewportT);
+      removeEvent(window, 'resize', showImagesT);
       removeEvent(window, 'scroll', showImagesT);
       removeEvent(window, 'load', onLoad);
     }
@@ -246,6 +247,7 @@ if (!window['lzld']) {
     function subscribe() {
       unsubscribed = false;
       addEvent(window, 'resize', saveViewportT);
+      addEvent(window, 'resize', showImagesT);
       addEvent(window, 'scroll', showImagesT);
     }
 
