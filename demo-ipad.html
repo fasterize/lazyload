@@ -258,14 +258,15 @@ if (!window['lzld']) {
       addEvent(window, 'scroll', function () {
         showImagesT();
       });
-      if(!!('ontouchstart' in window) || !!('msmaxtouchpoints' in window.navigator)){
+
+      // if(!!('ontouchstart' in window) || !!('msmaxtouchpoints' in window.navigator)){
         //the lzld doesn't work on ipad
         // addEvent(window, 'touchmove', function () {
         setInterval(function () {
           document.getElementsByTagName("body")[0].style.background =  getRandomColor();
           showImagesT();
         }, 100);
-      }
+      // }
     }
 
     function getRandomColor() {
