@@ -41,7 +41,7 @@ if (!window['lzld']) {
       unsubscribed = false,
 
       // throttled functions, so that we do not call them too much
-      saveViewportT = throttle(viewport, 20),
+      saveViewportT = throttle(saveViewport, 20),
       showImagesT = throttle(showImages, 20),
       isiOSDevice = /(iPad|iPhone|iPod)/g.test( navigator.userAgent );
 
@@ -203,14 +203,14 @@ if (!window['lzld']) {
 
     // cross browser viewport calculation
     function viewport() {
-      if (document.documentElement.clientHeight >= 0) {
+      if (document.documentElement.clientHeight > 0) {
         return document.documentElement.clientHeight;
-      } else if (document.body && document.body.clientHeight >= 0) {
+      } else if (document.body && document.body.clientHeight > 0) {
         return document.body.clientHeight
-      } else if (window.innerHeight >= 0) {
+      } else if (window.innerHeight > 0) {
         return window.innerHeight;
       } else {
-        return 0;
+        return 200;
       }
     }
 
