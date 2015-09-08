@@ -2,7 +2,7 @@
   "name": "lazyloadjs",
   "version": "3.2.1",
   "description": "Image lazy loading",
-  "main": "./lazyload.js",
+  "main": "./index",
   "scripts": {
     "build": "browserify ./lazyload.js -s lazyload -p deumdify > build/lazyload.js && ccjs build/lazyload.js > build/lazyload.min.js",
     "watch": "watchify ./lazyload.js -d -s lazyload -p deumdify -o build/lazyload.min.js -v",
@@ -14,7 +14,8 @@
   "author": "Vincent Voyer <vincent.voyer@gmail.com> (http://github.com/vvo)",
   "license": "MIT",
   "dependencies": {
-    "in-viewport": "https://github.com/fasterize/in-viewport.git#75fd718cf48c0b0d7c07b4a60e35e106739e962d"
+    "in-viewport": "https://github.com/fasterize/in-viewport.git#75fd718cf48c0b0d7c07b4a60e35e106739e962d",
+    "merge": "1.2.0"
   },
   "devDependencies": {
     "browserify": "9.0.3",
@@ -22,7 +23,6 @@
     "deumdify": "1.1.0",
     "express": "4.12.2",
     "http-server": "0.7.5",
-    "merge": "1.2.0",
     "watchify": "2.4.0",
     "zuul": "2.1.1",
     "zuul-ngrok": "3.0.0"
