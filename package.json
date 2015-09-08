@@ -6,7 +6,7 @@
   "scripts": {
     "build": "browserify ./lazyload.js -s lazyload -p deumdify > build/lazyload.js && ccjs build/lazyload.js > build/lazyload.min.js",
     "watch": "watchify ./lazyload.js -d -s lazyload -p deumdify -o build/lazyload.min.js -v",
-    "dev": "npm run watch & DEBUG=zuul* zuul --local 8080 -- test/*.js",
+    "dev": "npm run watch & DEBUG=zuul* zuul --local 9999 -- test/*.js",
     "test": "npm run build && DEBUG=zuul* zuul --tunnel ngrok -- test/*.js",
     "examples": "http-server ./"
   },
@@ -14,7 +14,7 @@
   "author": "Vincent Voyer <vincent.voyer@gmail.com> (http://github.com/vvo)",
   "license": "MIT",
   "dependencies": {
-    "in-viewport": "3.4.0"
+    "in-viewport": "https://github.com/fasterize/in-viewport.git#75fd718cf48c0b0d7c07b4a60e35e106739e962d"
   },
   "devDependencies": {
     "browserify": "9.0.3",
