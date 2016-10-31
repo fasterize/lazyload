@@ -42,8 +42,7 @@ if (!window['lzld']) {
 
       // throttled functions, so that we do not call them too much
       saveViewportT = throttle(saveViewport, 20),
-      showImagesT = throttle(showImages, 20),
-      isiOSDevice = /(iPad|iPhone|iPod)/g.test( navigator.userAgent );
+      showImagesT = throttle(showImages, 20);
 
     // Override image element .getAttribute globally so that we give the real src
     // does not works for ie < 8: http://perfectionkills.com/whats-wrong-with-extending-the-dom/
@@ -181,8 +180,8 @@ if (!window['lzld']) {
       // We have to check that the current node is in the DOM
       // It could be a detached() dom node
       // http://bugs.jquery.com/ticket/4996
-      if (isiOSDevice || (contains(document.documentElement, img)
-        && img.getBoundingClientRect().top < winH + offset)) {
+      if (contains(document.documentElement, img)
+        && img.getBoundingClientRect().top < winH + offset) {
         // To avoid onload loop calls
         // removeAttribute on IE is not enough to prevent the event to fire
         img.onload = null;
