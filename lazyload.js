@@ -54,10 +54,6 @@ function lazyload(opts) {
     elt.onload = null;
     elt.removeAttribute('onload');
 
-    // https://github.com/vvo/lazyload/issues/62
-    elt.onerror = null;
-    elt.removeAttribute('onerror');
-
     if (indexOf.call(elts, elt) === -1) {
       inViewport(elt, opts, show);
     }
