@@ -186,9 +186,6 @@ if (!window['lzld']) {
         // removeAttribute on IE is not enough to prevent the event to fire
         img.onload = null;
         img.removeAttribute('onload');
-        // on IE < 8 we get an onerror event instead of an onload event
-        img.onerror = null;
-        img.removeAttribute('onerror');
 
         img.src = img.getAttribute(lazyAttr);
         img.removeAttribute(lazyAttr);
